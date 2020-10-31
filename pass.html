@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <style>
+            html , body{
+                height:100%;
+                width:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #0F2027; 
+                background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  
+                background: linear-gradient(to top, #2C5364, #203A43, #0F2027);
+                font-family: iransansweb;
+            }
+            div.form{
+                width:50%;
+            }
+            div{
+                box-sizing: border-box;
+            }
+            div.password-generate{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            button , input{
+                padding:10px;
+                font-family: iransansweb;
+                border:none;
+                text-align: center;
+                margin:10px;
+            }
+            div.form button{
+                width:40%;
+                border-radius: 5px;
+            }
+            div.form input{
+                background-color:transparent;
+                border-bottom: 2px solid rgba(255,255,255,0.3);
+                color:white;
+                transition: all 0.5s;
+                width:30%;
+            }
+            div.form input:focus, button:focus{
+                outline:none;
+            }
+            div.form input::placeholder{
+                color: rgba(255,255,255,0.6);
+            }
+            div.form input:focus{
+                width:40%;
+                border-bottom: 2px solid rgba(255,255,255,0.5);
+            }
+            /*  js classes  */
+            .error{
+                background-color: indianred;
+                color:white;
+                padding:10px;
+                border-radius: 5px;
+                width:40%;
+                transition: all 0.5s;
+                text-align:center;
+            }
+            .notError{
+                background-color: forestgreen;
+                color:white;
+                padding:10px;
+                border-radius: 5px;
+                width:40%;
+                transition: all 0.5s;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="form">
+            <div class="password-generate">
+               <input name="password" placeholder="رمز عبور مورد نظرت رو بنویس">
+               <div class="messages"></div>
+                <button onclick="putGeneratedPasswordInTextArea()">ساختن پسوورد مناسب</button>
+                <button onclick="checkPassword()">سنجش پسوورد</button>
+            </div>
+        </div>
+        
+        
+        <script src="pass.js"></script>
+    </body>
+</html>
